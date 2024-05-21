@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 20px;
+            background-color: #f2f2f2;
+        }
+        .form-container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+            margin: auto;
+            color: #333333;
+        }
+        .form-container h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #008080;
+        }
+        .star-rating {
+            display: inline-block;
+            unicode-bidi: bidi-override;
+            direction: rtl;
+            text-align: center;
+            width: 100%;
+        }
+        .star-rating input[type="radio"] {
+            display: none;
+        }
+        .star-rating label {
+            font-size: 30px;
+            color: #ddd;
+            padding: 5px;
+            cursor: pointer;
+        }
+        .star-rating input[type="radio"]:checked ~ label {
+            color: #f5b301;
+        }
+        .star-rating label:hover, .star-rating label:hover ~ label {
+            color: #f5b301;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #008080;
+        }
+        .form-group input, .form-group select, .form-group textarea {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .form-group input[type="checkbox"], .form-group input[type="radio"] {
+            width: auto;
+        }
+        .form-actions {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .form-actions button {
+            padding: 10px 20px;
+            background-color: #008080;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+        .form-actions button:hover {
+            background-color: #005555;
+        }
+        .file-upload {
+            border: 2px dashed #008080;
+            border-radius: 4px;
+            padding: 15px;
+            background-color: #f9f9f9;
+            margin-top: 20px;
+        }
+        .file-upload input[type="file"] {
+            display: none;
+        }
+        .file-upload label {
+            padding: 10px 15px;
+            background-color: #008080;
+            color: #fff;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .file-upload label:hover {
+            background-color: #005555;
+        }
+        .file-upload span {
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="form-container">
+    <h2>Formulário</h2>
+    <div class="star-rating" style="text-align: center; margin-bottom: 20px;">
+        <input type="radio" id="estrela5" name="avaliacao" value="5"><label for="estrela5" title="5 estrelas">★</label>
+        <input type="radio" id="estrela4" name="avaliacao" value="4"><label for="estrela4" title="4 estrelas">★</label>
+        <input type="radio" id="estrela3" name="avaliacao" value="3"><label for="estrela3" title="3 estrelas">★</label>
+        <input type="radio" id="estrela2" name="avaliacao" value="2"><label for="estrela2" title="2 estrelas">★</label>
+        <input type="radio" id="estrela1" name="avaliacao" value="1"><label for="estrela1" title="1 estrela">★</label>
+    </div>
+    <form action="https://formsubmit.co/naanmoreiralorena@gmail.com" method="POST">
+           <!-- Dados da Visita -->
+        <div class="form-group">
+            <label for="data-visita">Data:</label>
+            <input type="date" id="data-visita" name="data-visita">
+        </div>
+        <div class="form-group">
+            <label for="hora-visita">Hora:</label>
+            <input type="time" id="hora-visita" name="hora-visita">
+        </div>
+        <div class="form-group">
+            <label for="nome-profissional">Nome do Profissional:</label>
+            <input type="text" id="nome-profissional" name="nome-profissional">
+        </div>
+        <div class="form-group">
+            <label for="cargo-profissional">Cargo/Função:</label>
+            <input type="text" id="cargo-profissional" name="cargo-profissional">
+        </div> 
+        <!-- Identificação do Domicílio -->
+        <div class="form-group">
+            <label for="endereco do assistido">Endereço do assistido:</label>
+            <input type="text" id="endereco" name="endereco">
+        </div>
+        <div class="form-group">
+            <label for="bairro">Bairro:</label>
+            <input type="text" id="bairro" name="bairro">
+        </div>
+        <div class="form-group">
+            <label for="cidade">Cidade:</label>
+            <input type="text" id="cidade" name="cidade">
+        </div>
+        <div class="form-group">
+            <label for="Território">Território:</label>
+            <input type="text" id="Território" name="Território">
+        </div>
+        <div class="form-group">
+            <label for="prontuario-familiar">Número do Prontuário Familiar:</label>
+            <input type="text" id="prontuario-familiar" name="prontuario-familiar">
+        </div>
+
+        <!-- Composição Familiar -->
+        <div class="form-group">
+            <label for="responsavel">Responsável pela Residência:</label>
+            <input type="text" id="responsavel" name="responsavel">
+        </div>
+        <div class="form-group">
+            <label for="telefone-responsavel">Telefone:</label>
+            <input type="text" id="telefone-responsavel" name="telefone-responsavel">
+        </div>
+        <div class="form-group">
+            <label for="numero-moradores">Número de Moradores:</label>
+            <input type="number" id="numero-moradores" name="numero-moradores">
+        </div>
+        <div class="form-group">
+            <label for="criancas">Crianças (<5 anos):</label>
+            <input type="number" id="criancas" name="criancas">
+        </div>
+        <div class="form-group">
+            <label for="idosos">Idosos (>65 anos):</label>
+            <input type="number" id="idosos" name="idosos">
+        </div>
+
+        <!-- Condições de Saúde dos Moradores -->
+        <div class="form-group">
+            <label>Doenças Crônicas:</label>
+            <input type="checkbox" id="doenca-AIDS" name="doencas">
+            <label for="doenca-AIDS">AIDS</label>
+            <input type="checkbox" id="doenca-Sífilis" name="doencas">
+            <label for="doenca-Sífilis">Sífilis</label>
+            <input type="checkbox" id="doenca-Dengue" name="doencas">
+            <label for="doenca-Dengue">Dengue</label>
+            <input type="checkbox" id="doenca-Tricomoníase" name="doencas">
+            <label for="doenca-Tricomoníase">doenca-Tricomoníase</label>
+            <input type="checkbox" id="doenca-outras" name="doencas">
+            <label for="doenca-outras">Outras</label>
+            <input type="text" id="outras-doencas" name="outras-doencas">
+        </div>
+        <div class="form-group">
+            <label>Gestante na Residência:</label>
+            <input type="radio" id="gestante-sim" name="gestante" value="sim"> Sim
+            <input type="radio" id="gestante-nao" name="gestante" value="nao"> Não
+        </div>
+        <div class="form-group">
+            <label>Deficiências Físicas ou Mentais:</label>
+            <input type="radio" id="deficiencia-sim" name="deficiencia" value="sim"> Sim
+            <input type="radio" id="deficiencia-nao" name="deficiencia" value="nao"> Não<br>
+            Se sim, especificar: <input type="text" id="deficiencia-desc" name="deficiencia-desc">
+        </div>
+
+        <!-- Acesso e Uso dos Serviços de Saúde -->
+        <div class="form-group">
+            <label for="unidade-saude">Unidade de Saúde de Referência:</label>
+            <input type="text" id="unidade-saude" name="unidade-saude">
+        </div>
+        <div class="form-group">
+            <label>Visitas à Unidade de Saúde:</label>
+            <input type="radio" id="
+visita-regular" name="visitas" value="regular"> Regular
+            <input type="radio" id="visita-ocasional" name="visitas" value="ocasional"> Ocasional
+            <input type="radio" id="visita-nunca" name="visitas" value="nunca"> Nunca
+        </div>
+        <div class="form-group">
+            <label>Participação em Programas de Saúde:</label>
+            <input type="checkbox" id="programa-Saúde da família" name="programas" value="Saúde da família">Saúde da Familiar<br>
+            <input type="checkbox" id="programa-prenatal" name="programas" value="prenatal"> Pré-natal<br>
+            <input type="checkbox" id="programa-Acompanhamento nutricional" name="programas" value="Acompanhamento nutricional">Acompanhamento nutricional<br>
+            <input type="checkbox" id="programa-Avaliação Clínica" name="programas" value="Avaliação Clínica">Avaliação Clínica<br>
+            <input type="checkbox" id="programa-BUcal" name="programas" value="Bucal"> Saúde Bucal<br>
+            <input type="checkbox" id="programa-outros" name="programas" value="outros"> Outros: <input type="text" id="programa-outros-desc" name="programa-outros-desc">
+        </div>
+
+        <!-- Imunização -->
+        <div class="form-group">
+            <label>Carteira de Vacinação Atualizada:</label>
+            <input type="radio" id="vacina-sim" name="vacina" value="sim"> Sim
+            <input type="radio" id="vacina-nao" name="vacina" value="nao"> Não
+        </div>
+
+        <!-- Condições de Saneamento e Moradia -->
+        <div class="form-group">
+            <label>Abastecimento de Água:</label>
+            <input type="radio" id="agua-rede" name="agua" value="rede"> Rede Pública
+            <input type="radio" id="agua-poco" name="agua" value="poco"> Poço
+            <input type="radio" id="agua-outro" name="agua" value="outro"> Outro: <input type="text" id="agua-outro-desc" name="agua-outro-desc">
+        </div>
+        <div class="form-group">
+            <label>Esgotamento Sanitário:</label>
+            <input type="radio" id="esgoto-rede" name="esgoto" value="rede"> Rede Pública
+            <input type="radio" id="esgoto-fossa" name="esgoto" value="fossa"> Fossa
+            <input type="radio" id="esgoto-ceu" name="esgoto" value="ceu"> Céu Aberto
+        </div>
+        <div class="form-group">
+            <label>Coleta de Lixo:</label>
+            <input type="radio" id="lixo-regular" name="lixo" value="regular"> Regular
+            <input type="radio" id="lixo-irregular" name="lixo" value="irregular"> Irregular
+            <input type="radio" id="lixo-nao" name="lixo" value="nao"> Não possui
+        </div>
+
+        <!-- Observações e Necessidades -->
+        <div class="form-group">
+            <label for="necessidades">Principais Necessidades Relatadas:</label>
+            <textarea id="necessidades" name="necessidades" rows="3"></textarea>
+        </div>
+        <div class="form-group">
+            <label for="observacoes">Observações Adicionais:</label>
+            <textarea id="observacoes" name="observacoes" rows="3"></textarea>
+        </div>
+
+        <!-- Assinaturas -->
+        <div class="form-group">
+            <label for="assinatura-profissional">Assinatura do Profissional:</label>
+            <select id="assinatura-profissional" name="assinatura-profissional" multiple>
+                <option value="vigilancia Sanitaria1">Vigilancia Sanitaria</option>
+                <option value="vigilancia em Saúde2">Vigilancia em saúde</option>
+                <option value="vigilancia Epidemiológica3">Vigilancia Epidemiológica</option>
+                <option value="vigilancia Ambiental4">Vigilancia Ambiental</option>
+                <option value="vigilancia do Trabalhador(ar)5">Vigilancia do trabalhador(ar)</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="Email da vigilancia">Email da vigilancia:</label>
+            <input type="text" id="Email da vigilancia" name="Email da vigilancia">
+        </div>
+
+        <!-- Upload de Arquivos e Fotos -->
+        <div class="form-group file-upload">
+            <label for="file-upload">Upload de Arquivos e Fotos:</label>
+            <input type="file" id="file-upload" name="file-upload" multiple>
+            <span>(Selecione um ou mais arquivos)</span>
+        </div>
+
+        <div class="form-actions">
+            <button type="submit">Enviar</button>
+        </div>
+    </form>
+</div>
+
+</body>
+</html>
+```
