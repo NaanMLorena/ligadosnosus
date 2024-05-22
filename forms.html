@@ -112,14 +112,15 @@
 
 <div class="form-container">
     <h2>Formulário</h2>
-    <div class="star-rating" style="text-align: center; margin-bottom: 20px;">
-        <input type="radio" id="estrela5" name="avaliacao" value="5"><label for="estrela5" title="5 estrelas">★</label>
-        <input type="radio" id="estrela4" name="avaliacao" value="4"><label for="estrela4" title="4 estrelas">★</label>
-        <input type="radio" id="estrela3" name="avaliacao" value="3"><label for="estrela3" title="3 estrelas">★</label>
-        <input type="radio" id="estrela2" name="avaliacao" value="2"><label for="estrela2" title="2 estrelas">★</label>
-        <input type="radio" id="estrela1" name="avaliacao" value="1"><label for="estrela1" title="1 estrela">★</label>
-    </div>
-    <form action="https://formsubmit.co/naanmoreiralorena@gmail.com" method="POST">
+
+    <form action="https://formsubmit.co/naanmoreiralorena@gmail.com" enctype="multipart/form-data" method="POST">
+        <div class="star-rating" style="text-align: center; margin-bottom: 20px;">
+            <input type="radio" id="estrela5" name="avaliacao" value="Nível 5 de urgência"><label for="estrela5" title="5 estrelas">★</label>
+            <input type="radio" id="estrela4" name="avaliacao" value="Nível 4 de urgência"><label for="estrela4" title="4 estrelas">★</label>
+            <input type="radio" id="estrela3" name="avaliacao" value="Nível 3 de urgência"><label for="estrela3" title="3 estrelas">★</label>
+            <input type="radio" id="estrela2" name="avaliacao" value="Nível 2 de urgência"><label for="estrela2" title="2 estrelas">★</label>
+            <input type="radio" id="estrela1" name="avaliacao" value="Nível 1 de urgência"><label for="estrela1" title="1 estrela">★</label>
+        </div>
            <!-- Dados da Visita -->
         <div class="form-group">
             <label for="data-visita">Data:</label>
@@ -184,15 +185,14 @@
         <!-- Condições de Saúde dos Moradores -->
         <div class="form-group">
             <label>Doenças Crônicas:</label>
-            <input type="checkbox" id="doenca-AIDS" name="doencas">
             <label for="doenca-AIDS">AIDS</label>
-            <input type="checkbox" id="doenca-Sífilis" name="doencas">
+            <input type="checkbox" id="doenca-AIDS" name="doencas" value="AIDS">
             <label for="doenca-Sífilis">Sífilis</label>
-            <input type="checkbox" id="doenca-Dengue" name="doencas">
+            <input type="checkbox" id="doenca-Sífilis" name="doencas" value="sífilis">
             <label for="doenca-Dengue">Dengue</label>
-            <input type="checkbox" id="doenca-Tricomoníase" name="doencas">
-            <label for="doenca-Tricomoníase">doenca-Tricomoníase</label>
-            <input type="checkbox" id="doenca-outras" name="doencas">
+            <input type="checkbox" id="doenca-Dengue" name="doencas" value="dengue">
+            <label for="doenca-Tricomoníase">Tricomoníase</label>
+            <input type="checkbox" id="doenca-Tricomoníase" name="doencas" value="tricomaníase">
             <label for="doenca-outras">Outras</label>
             <input type="text" id="outras-doencas" name="outras-doencas">
         </div>
@@ -291,11 +291,22 @@ visita-regular" name="visitas" value="regular"> Regular
         </div>
 
         <div class="form-actions">
-            <button type="submit">Enviar</button>
+            <button type="submit" onclick="href(); return false">Enviar</button>
         </div>
+
+        <input type="hidden" name="_subject" value="Novo Contato!">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="text" name="_honey" style="display:none">
     </form>
 </div>
 
+<script>
+    
+    function href() {
+        location.href = "thanks.html";
+    }
+
+</script>
 </body>
 </html>
 ```
