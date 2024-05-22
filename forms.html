@@ -291,22 +291,16 @@ visita-regular" name="visitas" value="regular"> Regular
         </div>
 
         <div class="form-actions">
-            <button type="submit" onclick="href(); return false">Enviar</button>
+            <button type="submit">Enviar</button>
         </div>
 
+        <input type="hidden" name="_next" value="https://ligadosnosus.netlify.app/thanks.html">
         <input type="hidden" name="_subject" value="Novo Contato!">
         <input type="hidden" name="_captcha" value="false">
         <input type="text" name="_honey" style="display:none">
     </form>
 </div>
 
-<script>
-    
-    function href() {
-        location.href = "thanks.html";
-    }
-
-</script>
 </body>
 </html>
 ```
