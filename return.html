@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Retorno</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f0f8ff; /* Fundo azul claro */
+        }
+        .form-container {
+            background-color: #ffffff; /* Cor de fundo branca */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            margin: auto;
+            color: #333333; /* Cor das letras preto */
+        }
+        .form-container h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #4a4ac3; /* Cor das letras do título azul claro */
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #00008B; /* Cor das letras azul claro */
+        }
+        .form-group input, .form-group select, .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .form-group input[type="checkbox"], .form-group input[type="radio"] {
+            width: auto;
+        }
+        .form-actions {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .form-actions button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .form-actions button:hover {
+            background-color: #45a049;
+        }
+        .file-upload {
+            border: 2px solid #ddd;
+            border-radius: 4px;
+            padding: 15px;
+            background-color: #f9f9f9;
+            margin-top: 20px;
+        }
+        .file-upload input[type="file"] {
+            display: none;
+        }
+        .file-upload label {
+            padding: 10px 15px;
+            background-color: #4CAF50;
+            color: #fff;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .file-upload label:hover {
+            background-color: #45a049;
+        }
+        .file-upload span {
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="form-container">
+    <h2>Formulário de Retorno</h2>
+    <form action="https://formsubmit.co/luizaginartandrade@gmail.com" enctype="multipart/form-data" method="POST">
+        <!-- Informações Pessoais -->
+        <div class="form-group">
+            <label for="nome-vigilante">Nome:</label>
+            <input type="text" id="nome-vigilante" name="nome-vigilante">
+        </div>
+        <div class="form-group">
+            <label for="cpf-vigilante">CPF:</label>
+            <input type="text" id="cpf-vigilante" name="cpf-vigilante">
+        </div>
+        <div class="form-group">
+            <label for="telefone-vigilante">Telefone:</label>
+            <input type="text" id="telefone-vigilante" name="telefone-vigilante">
+        </div>
+        <div class="form-group">
+            <label for="email-vigilante">Email:</label>
+            <input type="email" id="email-vigilante" name="email-vigilante">
+        </div>
+
+        <!-- Relatório -->
+        <div class="form-group">
+            <label for="relatorio">Relatório:</label>
+            <textarea id="relatorio" name="relatorio" rows="5"></textarea>
+        </div>
+
+        <!-- Local para Adicionar Arquivos e Imagens -->
+        <div class="form-group file-upload">
+            <label for="file-upload">Upload de Arquivos e Fotos:</label>
+            <input type="file" id="file-upload" name="file-upload" multiple>
+            <span>(Selecione um ou mais arquivos)</span>
+        </div>
+
+        <!-- Confirmação -->
+        <div class="form-actions">
+            <button type="button">Confirmar</button>
+        </div>
+
+        <input type="hidden" name="_next" value="https://ligadosnosus.netlify.app/thanks.html">
+        <input type="hidden" name="_subject" value="Novo Contato!">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="text" name="_honey" style="display:none">
+
+    </form>
+</div>
+
+</body>
+</html>

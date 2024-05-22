@@ -99,8 +99,10 @@ function login() {
     var username = document.getElementById('username').value;
     var password = document.getElementById('password').value;
 
-    if ((username == "teste@gmail.com") && (password == "123456")) {
+    if ((username == "unidade@gmail.com") && (password == "123456")) {
         location.href = "forms.html";
+    } else if ((username == "vigilante@gmail.com") && (password = "123456")) {
+        location.href = "return.html";
     } else {
         alert("Login ou senha incorretos");
     }
