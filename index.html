@@ -3,144 +3,221 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página de Login</title>
+    <title>Página de Introdução</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            background: url('') no-repeat center center fixed; /* Altere a URL para a imagem desejada */
-            background-size: cover;
+            font-family: 'Alice', sans-serif;
             margin: 0;
             padding: 0;
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
+            min-height: 100vh;
+            background-color: #C1E4DD;
         }
 
-        .login-container {
-            background-color: rgba(255, 255, 255, 0.9);
+        .container {
+            background-color: #FFF;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 900px;
+            width: 90%;
             padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            max-width: 400px;
-            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
             text-align: center;
         }
 
-        h2 {
-            color: #333333;
-            margin-bottom: 20px;
-        }
-
-        label {
-            display: block;
-            margin: 10px 0 5px;
-            color: #87CEEB;
-        }
-
-        input[type="text"], input[type="password"] {
+        .header {
             width: 100%;
-            padding: 10px;
+            padding: 20px;
+            background-color: #71C7A6;
+            border-radius: 15px 15px 0 0;
+            color: #FFF;
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 32px;
+            font-weight: bold;
+        }
+
+        .content {
+            width: 100%;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .content h2 {
+            color: #4A4A4A;
+            font-size: 36px;
             margin-bottom: 10px;
-            border: 1px solid #dddddd;
-            border-radius: 4px;
-            color: #333;
         }
 
-        button {
+        .content p {
+            color: #4A4A4A;
+            margin: 10px 0 20px 0;
+            font-size: 18px;
+            max-width: 600px;
+        }
+
+        .images {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .images img {
+            max-width: 150px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .map {
             width: 100%;
-            padding: 10px;
-            border: none;
-            background-color: #87CEEB;
-            color: #ffffff;
-            font-size: 16px;
-            border-radius: 4px;
-            cursor: pointer;
+            height: 300px;
+            margin-top: 20px;
+            border-radius: 10px;
+            overflow: hidden;
         }
 
-        button:hover {
+        .button-container {
+            margin-top: 20px;
+            display: flex;
+            gap: 10px;
+        }
+
+        .button {
+            background-color: #87CEEB;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 8px;
+            color: white;
+            cursor: pointer;
+            text-decoration: none;
+            font-size: 18px;
+            transition: background-color 0.3s;
+        }
+
+        .button:hover {
             background-color: #00BFFF;
         }
 
-        .chart-container {
+        .footer {
+            width: 100%;
+            padding: 10px;
+            text-align: center;
+            font-size: 14px;
+            margin-top: 20px;
+            background-color: #71C7A6;
+            color: #FFF;
+            border-radius: 0 0 15px 15px;
+        }
+
+        #accessibility-info {
+            display: none;
+            text-align: left;
             margin-top: 20px;
         }
 
-        canvas {
-            max-width: 100%;
-            height: auto;
+        #accessibility-info h3 {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        #accessibility-info p {
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+
+        #accessibility-info ul {
+            padding-left: 20px;
+        }
+
+        #accessibility-info li {
+            font-size: 16px;
+            margin-bottom: 5px;
         }
     </style>
 </head>
 <body>
-
-<div class="login-container">
-    <h2>Login</h2>
-    <form>
-        <label for="username">Usuário</label>
-        <input type="text" id="username" name="username" required>
-
-        <label for="password">Senha</label>
-        <input type="password" id="password" name="password" required>
-
-        <button type="submit" onclick="login(); return false">Entrar</button>
-    </form>
-
-    <div class="chart-container">
-        <canvas id="myChart"></canvas>
+    <div class="container">
+        <div class="header">
+            <h1>LIGADOS NO SUS</h1>
+        </div>
+        <div class="content">
+            <h2>Bem vindo</h2>
+            <p>Bem-vindo ao portal do Ligados no SUS! Use este formulário para otimizar seu trabalho e melhorar a qualidade do atendimento.</p>
+           <div class="map">
+                <iframe
+                    width="100%"
+                    height="300"
+                    frameborder="0"
+                    style="border:0"
+                    src="https://maps.google.com/maps?q=Cambot%C3%A1,%20Valen%C3%A7a%20-%20RJ,%2027600-000&z=15&output=embed" allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+        <div class="button-container">
+            <a href="login.html" class="button">Próximo</a>
+            <button id="accessibility-button" class="button">Acessibilidade</button>
+        </div>
+        <div id="accessibility-info">
+            <h3>Instruções para portadores de deficiência:</h3>
+            <p>Aqui estão algumas dicas para melhorar a acessibilidade deste site para pessoas com deficiência:</p>
+            <ul>
+                <li>Utilize um leitor de tela para acessar o conteúdo do site.</li>
+                <li>Aumente o contraste das cores ou utilize modos de alto contraste.</li>
+                <li>Use o teclado em vez do mouse para navegar pelo site.</li>
+                <li>Se encontrar problemas de acessibilidade, entre em contato conosco para que possamos melhorar.</li>
+                <li>Central de ajuda 24 98143-1019.</li>
+            </ul>
+        </div>
+        <div class="footer">
+            &copy; 2024 Ligados no SUS. Todos os direitos reservados.
+        </div>
     </div>
-</div>
 
-<script>
+    <script>
+        document.getElementById("accessibility-button").addEventListener("click", function() {
+            var accessibilityInfo = document.getElementById("accessibility-info");
+            if (accessibilityInfo.style.display === "none" || accessibilityInfo.style.display === "") {
+                accessibilityInfo.style.display = "block";
+                speakText(accessibilityInfo.innerText);
+            } else {
+                accessibilityInfo.style.display = "none";
+                window.speechSynthesis.cancel(); // Stop speech if the section is hidden
+            }
+        });
 
+        function speakText(text) {
+            if ('speechSynthesis' in window) {
+                var speech = new SpeechSynthesisUtterance(text);
+                var voices = window.speechSynthesis.getVoices();
+                var brazilianPortugueseVoice = voices.find(voice => voice.lang === 'pt-BR' && voice.gender === 'female');
 
-function login() {
-
-    var username = document.getElementById('username').value;
-    var password = document.getElementById('password').value;
-
-    if ((username == "unidade@gmail.com") && (password == "123456")) {
-        location.href = "forms.html";
-    } else if ((username == "vigilante@gmail.com") && (password = "123456")) {
-        location.href = "return.html";
-    } else {
-        alert("Login ou senha incorretos");
-    }
-
-}
-
-</script>
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-<script>
-    const ctx = document.getElementById('myChart').getContext('2d');
-    const myChart = new Chart(ctx, {
-        type: 'bar',
-        data: {
-            labels: ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho'],
-            datasets: [{
-                label: 'casos resolvidos',
-                data: [12, 19, 3, 5, 2, 3],
-                backgroundColor: 'rgba(54, 162, 235, 0.2)',
-                borderColor: 'rgba(54, 162, 235, 1)',
-                borderWidth: 1
-            }, {
-                label: 'Casos Não resolvidos',
-                data: [2, 3, 20, 5, 1, 4],
-                backgroundColor: 'rgba(255, 99, 132, 0.2)',
-                borderColor: 'rgba(255, 99, 132, 1)',
-                borderWidth: 1
-            }]
-        },
-        options: {
-            responsive: true,
-            scales: {
-                y: {
-                    beginAtZero: true
+                if (brazilianPortugueseVoice) {
+                    speech.voice = brazilianPortugueseVoice;
+                } else {
+                    speech.lang = 'pt-BR';
                 }
+
+                window.speechSynthesis.speak(speech);
+            } else {
+                alert("Seu navegador não suporta a API de síntese de voz.");
             }
         }
-    });
-</script>
 
+        // Ensure voices are loaded
+        window.speechSynthesis.onvoiceschanged = function() {
+            var voices = window.speechSynthesis.getVoices();
+            console.log(voices);
+        };
+    </script>
 </body>
 </html>

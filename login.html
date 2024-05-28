@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Login</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: url('') no-repeat center center fixed; /* Altere a URL para a imagem desejada */
+            background-size: cover;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .login-container {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            width: 100%;
+            text-align: center;
+        }
+
+        h2 {
+            color: #333333;
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin: 10px 0 5px;
+            color: #87CEEB;
+        }
+
+        input[type="text"], input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #dddddd;
+            border-radius: 4px;
+            color: #333;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            background-color: #87CEEB;
+            color: #ffffff;
+            font-size: 16px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #00BFFF;
+        }
+
+        .chart-container {
+            margin-top: 20px;
+        }
+
+        canvas {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+
+<div class="login-container">
+    <h2>Login</h2>
+    <form>
+        <label for="username">Usuário</label>
+        <input type="text" id="username" name="username" required>
+
+        <label for="password">Senha</label>
+        <input type="password" id="password" name="password" required>
+
+        <button type="submit" onclick="login(); return false">Entrar</button>
+    </form>
+
+    <div class="chart-container">
+        <canvas id="myChart"></canvas>
+    </div>
+</div>
+
+<script>
+
+
+function login() {
+
+    var username = document.getElementById('username').value;
+    var password = document.getElementById('password').value;
+
+    if ((username == "unidade@gmail.com") && (password == "123456")) {
+        location.href = "forms.html";
+    } else if ((username == "vigilante@gmail.com") && (password = "123456")) {
+        location.href = "return.html";
+    } else {
+        alert("Login ou senha incorretos");
+    }
+
+}
+
+</script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+    const ctx = document.getElementById('myChart').getContext('2d');
+    const myChart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho'],
+            datasets: [{
+                label: 'casos resolvidos',
+                data: [12, 19, 3, 5, 2, 3],
+                backgroundColor: 'rgba(54, 162, 235, 0.2)',
+                borderColor: 'rgba(54, 162, 235, 1)',
+                borderWidth: 1
+            }, {
+                label: 'Casos Não resolvidos',
+                data: [2, 3, 20, 5, 1, 4],
+                backgroundColor: 'rgba(255, 99, 132, 0.2)',
+                borderColor: 'rgba(255, 99, 132, 1)',
+                borderWidth: 1
+            }]
+        },
+        options: {
+            responsive: true,
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            }
+        }
+    });
+</script>
+
+</body>
+</html>
