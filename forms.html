@@ -184,7 +184,7 @@
 
         <!-- Condições de Saúde dos Moradores -->
         <div class="form-group">
-            <label>Doenças Crônicas:</label>
+            <label>Doenças:</label>
             <label for="doenca-AIDS">AIDS</label>
             <input type="checkbox" id="doenca-AIDS" name="doencas" value="AIDS">
             <label for="doenca-Sífilis">Sífilis</label>
@@ -222,9 +222,9 @@ visita-regular" name="visitas" value="regular"> Regular
         </div>
         <div class="form-group">
             <label>Participação em Programas de Saúde:</label>
-            <input type="checkbox" id="programa-Saúde da família" name="programas" value="Saúde da família">Saúde da Familiar<br>
+            <input type="checkbox" id="programa-Saúde da família" name="programas" value="Saúde da família">Saúde da Família<br>
             <input type="checkbox" id="programa-prenatal" name="programas" value="prenatal"> Pré-natal<br>
-            <input type="checkbox" id="programa-Acompanhamento nutricional" name="programas" value="Acompanhamento nutricional">Acompanhamento nutricional<br>
+            <input type="checkbox" id="programa-Acompanhamento nutricional" name="programas" value="Acompanhamento nutricional">Acompanhamento Nutricional<br>
             <input type="checkbox" id="programa-Avaliação Clínica" name="programas" value="Avaliação Clínica">Avaliação Clínica<br>
             <input type="checkbox" id="programa-BUcal" name="programas" value="Bucal"> Saúde Bucal<br>
             <input type="checkbox" id="programa-outros" name="programas" value="outros"> Outros: <input type="text" id="programa-outros-desc" name="programa-outros-desc">
@@ -271,15 +271,15 @@ visita-regular" name="visitas" value="regular"> Regular
         <div class="form-group">
             <label for="assinatura-profissional">Escolha a Vigilância:</label>
             <select id="assinatura-profissional" name="assinatura-profissional" multiple>
-                <option value="vigilancia Sanitaria1">Vigilancia Sanitaria</option>
-                <option value="vigilancia em Saúde2">Vigilancia em saúde</option>
-                <option value="vigilancia Epidemiológica3">Vigilancia Epidemiológica</option>
-                <option value="vigilancia Ambiental4">Vigilancia Ambiental</option>
-                <option value="vigilancia do Trabalhador(ar)5">Vigilancia do trabalhador(ar)</option>
+                <option value="vigilancia Sanitaria1">Vigilância Sanitária</option>
+                <option value="vigilancia em Saúde2">Vigilancia em Saúde</option>
+                <option value="vigilancia Epidemiológica3">Vigilância Epidemiológica</option>
+                <option value="vigilancia Ambiental4">Vigilância Ambiental</option>
+                <option value="vigilancia do Trabalhador(ar)5">Vigilância do Trabalhador</option>
             </select>
         </div>
         <div class="form-group">
-            <label for="Email da vigilancia">Email da vigilancia:</label>
+            <label for="Email da vigilancia">E-mail da Vigilância:</label>
             <input type="text" id="Email da vigilancia" name="Email da vigilancia">
         </div>
 
@@ -294,6 +294,7 @@ visita-regular" name="visitas" value="regular"> Regular
             <button type="submit">Enviar</button>
         </div>
 
+        <input type="hidden" name="_next" value="https://ligadosnosus.netlify.app/thanks.html">
         <input type="hidden" name="_subject" value="Novo Contato!">
         <input type="hidden" name="_captcha" value="false">
         <input type="text" name="_honey" style="display:none">
